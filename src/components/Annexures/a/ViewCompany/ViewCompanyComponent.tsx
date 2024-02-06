@@ -161,6 +161,9 @@ export default function ViewCompanyComponent({ edit }: Props): JSX.Element {
                   );
                 }}
               />
+              <div className="flex justify-center">
+                <Button className="w-40 ">Submit</Button>
+              </div>
             </form>
           </Form>
         </Card>
@@ -172,26 +175,20 @@ export default function ViewCompanyComponent({ edit }: Props): JSX.Element {
         <h2 className="text-center pt-10 mb-5">Company Details</h2>
         <div className="flex flex-col p-10 w-full flex-flex-col gap-4 space-y-5">
           <div className="grid grid-cols-2 place-items-start">
-            <div className="text-xl ">
-              Name of the Applicant:
-            </div>
-            <div >
+            <div className="text-xl ">Name of the Applicant:</div>
+            <div>
               <p className="text-lg">Instorein Technologies Private Limited</p>
             </div>
           </div>
           <div className="grid grid-cols-2 place-items-start">
-            <div className="text-xl">
-              Pan No:
-            </div>
-            <div >
+            <div className="text-xl">Pan No:</div>
+            <div>
               <p className="text-lg">AAECIO133R1</p>
             </div>
           </div>
           <div className="grid grid-cols-2 place-items-start">
-            <div className="text-xl">
-            GSTIN:
-            </div>
-            <div >
+            <div className="text-xl">GSTIN:</div>
+            <div>
               <p className="text-lg">29AAECIO133R1</p>
             </div>
           </div>
@@ -202,10 +199,8 @@ export default function ViewCompanyComponent({ edit }: Props): JSX.Element {
             </div>
           </div>
           <div className="grid grid-cols-2 place-items-start">
-            <div className="text-xl ">
-              Constitution of Business:
-            </div>
-            <div >
+            <div className="text-xl ">Constitution of Business:</div>
+            <div>
               <p className="text-lg">Private Limited Company</p>
             </div>
           </div>

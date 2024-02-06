@@ -142,6 +142,9 @@ export default function ManufacturingDetailsComponent({
 
               <Textarea placeholder="Details" />
               <Input type="file" />
+              <div className="flex justify-center">
+                <Button className="w-40 ">Submit</Button>
+              </div>
             </form>
           </Form>
         </Card>

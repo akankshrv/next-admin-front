@@ -130,6 +130,9 @@ export default function RegisteredOfficeComponent({
                   );
                 }}
               />
+              <div className="flex justify-center">
+                <Button className="w-40 ">Submit</Button>
+              </div>
             </form>
           </Form>
         </Card>

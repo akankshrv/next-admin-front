@@ -69,7 +69,11 @@ export default function BankAccountDetailsComponent({
                           Branch Name:
                         </FormLabel>
                         <FormControl className="col-span-2">
-                          <Input {...field} placeholder="branch name" type="text" />
+                          <Input
+                            {...field}
+                            placeholder="branch name"
+                            type="text"
+                          />
                         </FormControl>
                       </div>
                       <FormMessage />
@@ -96,6 +100,9 @@ export default function BankAccountDetailsComponent({
                   );
                 }}
               />
+              <div className="flex justify-center">
+                <Button className="w-40 ">Submit</Button>
+              </div>
             </form>
           </Form>
         </Card>

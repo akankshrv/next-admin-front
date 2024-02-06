@@ -290,19 +290,29 @@ const FormAnnexureA = () => {
                 </h1>
               </AccordionTrigger>
               <AccordionContent className="space-y-3 p-2 mb-1">
+                <div className="flex justify-end">
+                  <Button className="">Add</Button>
+                </div>
+
                 <Table>
                   <TableHeader>
                     <TableRow>
                       <TableHead className="w-[15%]">Location</TableHead>
                       <TableHead className="w-[25%]">Facility Name</TableHead>
-                      <TableHead className="w-[20%]">Goods Manufactured</TableHead>
+                      <TableHead className="w-[20%]">
+                        Goods Manufactured
+                      </TableHead>
                       <TableHead className="w-[20%]">InCharge</TableHead>
-                      <TableHead className="w-[25%] text-center">Actions</TableHead>
+                      <TableHead className="w-[25%] text-center">
+                        Actions
+                      </TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableRow>
                     <TableCell>Bangalore</TableCell>
-                    <TableCell>Instorein Technologies Private Limited</TableCell>
+                    <TableCell>
+                      Instorein Technologies Private Limited
+                    </TableCell>
                     <TableCell>500</TableCell>
                     <TableCell>Subramaniah Reddy</TableCell>
                     <TableCell>
