@@ -1,0 +1,68 @@
+{
+    "companies": [
+      {
+        "id": 1,
+        "name": "Your Company",
+        "panNumber": "ABC1234567",
+        "gstin": "12ABCDE1234F1Z5",
+        "iec": "IEC123456789",
+        "constitution": "Private Limited"
+      },
+      {
+        "id": 2,
+        "name": "Another Company",
+        "panNumber": "XYZ9876543",
+        "gstin": "98XYZWV4321G6H7",
+        "iec": "IEC987654321",
+        "constitution": "Limited Liability Partnership"
+      },
+      {
+        "id": 3,
+        "name": "Sample Corp",
+        "panNumber": "PQR6543210",
+        "gstin": "76PQRA0987B2C3D4",
+        "iec": "IEC456789012",
+        "constitution": "Private Limited"
+      },
+      {
+        "id": 4,
+        "name": "Sample Corp",
+        "panNumber": "PQR6543210",
+        "gstin": "76PQRA0987B2C3D4",
+        "iec": "IEC456789012",
+        "constitution": "Private Limited"
+      }
+    ],
+    "annexures": [
+      {
+        "id": 1,
+        "name": "Annexure A",
+        "header": "Company Registration and Warehouse Details",
+        "description": "Initiate the registration process for our company and warehouse in the system to optimize logistical procedures.",
+        "link": "/dashboard/annexures/a"
+      },
+      {
+        "id": 2,
+        "name": "Annexure B",
+        "header": "Contract Creation",
+        "description": "Generate a comprehensive contract incorporating all necessary details, ensuring clarity and adherence to agreed-upon terms.",
+        "link": "/dashboard/annexures/b"
+      },
+      {
+        "id": 3,
+        "name": "Annexure C",
+        "header": "Header for Annexure 3",
+        "description": "Include specific details under Annexure 3, providing supplementary information as outlined in the corresponding header.",
+        "link": "/dashboard/annexures/c"
+      },
+      {
+        "id": 4,
+        "name": "Annexure D",
+        "header": "Header for Annexure 4",
+        "description": "Incorporate relevant details in Annexure 4, supplementing the main documentation with additional information as indicated by the respective header.",
+        "link": "/dashboard/annexures/d"
+      }
+    ]
+
+  }
+  
