@@ -13,7 +13,7 @@ import {
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-const CompanyDetails = async () => {
+const CompanyTable = async () => {
   async function getCompanies(): Promise<Companies> {
     const result = await fetch("http://localhost:3000/api/companies");
 
@@ -75,4 +75,4 @@ const CompanyDetails = async () => {
   );
 };
 
-export default CompanyDetails;
+export default CompanyTable;

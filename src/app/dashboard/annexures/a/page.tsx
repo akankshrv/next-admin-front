@@ -1,11 +1,12 @@
 // "use client";
 
-import CompanyDetails from "@/components/Annexures/CompanyDetails";
-import FormAnnexureA from "@/components/Annexures/FormAnnexureA";
+import Tabs from "@/components/Annexures/a/Tabs";
+
 
 export default function AnnexureA() {
-  return (<>
-  {/* <CompanyDetails /> */}
-  <FormAnnexureA />
-  </>);
+  return (
+    <>  
+      <Tabs />
+    </>
+  );
 }

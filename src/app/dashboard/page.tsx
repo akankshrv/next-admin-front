@@ -1,11 +1,11 @@
 
-import CompanyDetails from "@/components/Annexures/CompanyDetails";
+import CompanyTable from "@/components/Annexures/CompanyTable";
 
 const DashBoard = async () => {
  
   return (
     <main>
-    <CompanyDetails />
+    <CompanyTable />
     </main>
   );
 };

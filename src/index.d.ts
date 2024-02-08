@@ -16,5 +16,6 @@ export interface Companies {
 }
 
 export interface Props {
-  edit: boolean;
+  
+  isEdit : boolean;
 }
