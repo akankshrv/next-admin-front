@@ -3,18 +3,7 @@ import React from "react";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormMessage,
-  FormLabel,
-  FormControl,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import CompanyDetails from "@/components/Annexures/CompanyDetails";
-import { Textarea } from "../ui/textarea";
 import { Card, CardHeader } from "../ui/card";
 import {
   Accordion,
