@@ -30,6 +30,8 @@ import {
   TableRow,
 } from "../ui/table";
 import Link from "next/link";
+import { GrView } from "react-icons/gr";
+import { IoIosRefresh, IoIosAddCircleOutline } from "react-icons/io";
 
 const formSchema = z.object({
   name: z.string(),
@@ -63,6 +65,10 @@ const FormAnnexureA = () => {
   return (
     <>
       <Card className="flex flex-col justify-between max-w-7xl pb-20 mx-auto mt-10 mb-10 ">
+        <div className="space-x-10 px-10 my-10 -mb-10">
+          <Button className="">Company Details</Button>
+          <Button>Warehouse Details</Button>
+        </div>
         <h1 className="text-center p-10">Annexure A</h1>
 
         <div className="px-14 w-full flex flex-col gap-4 pb-10">
@@ -98,17 +104,18 @@ const FormAnnexureA = () => {
                     <TableCell>29AAECIO133R1</TableCell>
                     <TableCell className="text-center">
                       <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                        <Link
-                          href="/dashboard/annexures/a/editviewcompany"
-                          passHref
-                        >
-                          <Button> Edit</Button>
-                        </Link>
+                        <Button>
+                          {" "}
+                          <IoIosRefresh />{" "}
+                        </Button>
+
                         <Link
                           href="/dashboard/annexures/a/viewcompany"
                           passHref
                         >
-                          <Button>View</Button>
+                          <Button>
+                            <GrView />
+                          </Button>
                         </Link>
                       </div>
                     </TableCell>
@@ -148,14 +155,17 @@ const FormAnnexureA = () => {
                     <TableCell>company@email.com</TableCell>
                     <TableCell className="text-center">
                       <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                        <Link href="/dashboard/annexures/a/editregisteredoffice">
-                          <Button>Edit</Button>
-                        </Link>
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
+
                         <Link
                           href="/dashboard/annexures/a/registeredoffice"
                           passHref
                         >
-                          <Button>View</Button>
+                          <Button>
+                            <GrView />
+                          </Button>
                         </Link>
                       </div>
                     </TableCell>
@@ -172,9 +182,10 @@ const FormAnnexureA = () => {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="w-[50%]">
+                      <TableHead className="w-[40%]">
                         Name of the Bank
                       </TableHead>
+                      <TableHead>IFSCE Code</TableHead>
                       <TableHead className="w-[25%]">Branch </TableHead>
                       <TableHead className="w-[25%]">Account No.</TableHead>
                       <TableHead className="text-center w-[25%]">
@@ -184,18 +195,21 @@ const FormAnnexureA = () => {
                   </TableHeader>
                   <TableRow>
                     <TableCell>Axis Bank</TableCell>
+                    <TableCell>AAECIO133R1</TableCell>
                     <TableCell>Bangalore</TableCell>
                     <TableCell>87421590634218</TableCell>
                     <TableCell className="text-center">
                       <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                        <Link href="/dashboard/annexures/a/editbankaccountdetails">
-                          <Button>Edit</Button>
-                        </Link>
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
                         <Link
                           href="/dashboard/annexures/a/bankaccountdetails"
                           passHref
                         >
-                          <Button>View</Button>
+                          <Button>
+                            <GrView />
+                          </Button>
                         </Link>
                       </div>
                     </TableCell>
@@ -227,11 +241,13 @@ const FormAnnexureA = () => {
                     <TableCell>901993992</TableCell>
                     <TableCell className="text-center">
                       <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                        <Link href="/dashboard/annexures/a/editdirectors">
-                          <Button>Edit</Button>
-                        </Link>
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
                         <Link href="/dashboard/annexures/a/directors" passHref>
-                          <Button>View</Button>
+                          <Button>
+                            <GrView />
+                          </Button>
                         </Link>
                       </div>
                     </TableCell>
@@ -264,17 +280,16 @@ const FormAnnexureA = () => {
                     <TableCell>Director</TableCell>
                     <TableCell className="text-center">
                       <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                        <Link
-                          href="/dashboard/annexures/a/editauthorizedperson"
-                          passHref
-                        >
-                          <Button>Edit</Button>
-                        </Link>
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
                         <Link
                           href="/dashboard/annexures/a/authorizedperson"
                           passHref
                         >
-                          <Button>View</Button>
+                          <Button>
+                            <GrView />
+                          </Button>
                         </Link>
                       </div>
                     </TableCell>
@@ -291,7 +306,7 @@ const FormAnnexureA = () => {
               </AccordionTrigger>
               <AccordionContent className="space-y-3 p-2 mb-1">
                 <div className="flex justify-end">
-                  <Button className="">Add</Button>
+                  <Button className=""><IoIosAddCircleOutline className="w-6 h-6"/></Button>
                 </div>
 
                 <Table>
@@ -317,17 +332,12 @@ const FormAnnexureA = () => {
                     <TableCell>Subramaniah Reddy</TableCell>
                     <TableCell>
                       <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                        <Link
-                          href="/dashboard/annexures/a/editmanufacturingdetails"
-                          passHref
-                        >
-                          <Button>Edit</Button>
-                        </Link>
+                        <Button><IoIosRefresh /></Button>
                         <Link
                           href="/dashboard/annexures/a/manufacturingdetails"
                           passHref
                         >
-                          <Button>View</Button>
+                          <Button><GrView /></Button>
                         </Link>
                       </div>
                     </TableCell>

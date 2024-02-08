@@ -6,7 +6,7 @@ export default function Header({ admin }: { admin: boolean }) {
     <>
       <div className="flex justify-between p-8 items-start mx-20">
         <Link href="/dashboard/annexures">
-          <h1 className="text-center ml-5 items-center">Aurigraph</h1>
+          <h1 className="text-center ml-5 items-center">CBW</h1>
         </Link>
 
         <div className="space-x-10">
