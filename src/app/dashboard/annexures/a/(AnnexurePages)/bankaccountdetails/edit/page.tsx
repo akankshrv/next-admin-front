@@ -1,5 +1,5 @@
 
-import BankAccountDetailsComponent from "@/components/Annexures/a/BankAccountDetails/BankAccountDetailsComponent";
+import BankAccountDetailsComponent from "@/components/Annexures/a/componentsForA/BankAccountDetails/BankAccountDetailsComponent";
 import { Button } from "@/components/ui/button";
 import React from "react";
 
