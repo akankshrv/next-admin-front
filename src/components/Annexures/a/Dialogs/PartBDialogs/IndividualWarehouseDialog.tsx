@@ -27,7 +27,7 @@ import {
 } from "@/components/ui/table";
 import { GrView } from "react-icons/gr";
 import { IoIosRefresh } from "react-icons/io";
-import Authdialog from "./Authdialog";
+import Authdialog from "../PartADialogs/Authdialog";
 import { Props } from "@/index";
 import MainInfoDialog from "./MainInfoDialog";
 
@@ -53,7 +53,7 @@ export default function IndividualWarehouseDialog({
               provide information under the following three headings:
             </DialogDescription>
           </DialogHeader>
-         
+
           <Accordion
             type="single"
             collapsible
@@ -70,10 +70,10 @@ export default function IndividualWarehouseDialog({
                 <Accordion
                   type="single"
                   collapsible
-                  defaultValue="item-1"
+                  defaultValue="item-0"
                   className="w-[95%]"
                 >
-                  <AccordionItem value="item-1">
+                  <AccordionItem value="item-0">
                     <AccordionTrigger>
                       <h1 className="text-3xl font-normal ">Main Info</h1>
                     </AccordionTrigger>
@@ -114,15 +114,89 @@ export default function IndividualWarehouseDialog({
                           </TableCell>
                           <TableCell>
                             <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                              <MainInfoDialog isEdit={false}/>
-                              <MainInfoDialog isEdit={true}/>
+                              {isEdit ? (
+                                <>
+                                  <MainInfoDialog isEdit={true} />
+                                  <MainInfoDialog isEdit={false} />
+                                </>
+                              ) : (
+                                <MainInfoDialog isEdit={false} />
+                              )}
                             </div>
                           </TableCell>
                         </TableRow>
                       </Table>
                     </AccordionContent>
                   </AccordionItem>
-                  <AccordionItem value="item-2"></AccordionItem>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>
+                      <h1 className="text-3xl font-normal ">
+                        Additional Checks
+                      </h1>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="text-center">
+                              Description of Premises{" "}
+                            </TableHead>
+                            <TableHead className="text-center">
+                              Goods Proposed to be Manufactured
+                            </TableHead>
+                            <TableHead className="text-center">
+                              Security Facilities at the Premises
+                            </TableHead>
+                            <TableHead className="text-center">
+                              Security Measures
+                            </TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableRow>
+                          <TableCell>
+                            <div className="space-x-4 flex justify-center ">
+                              <Button>
+                                <GrView />
+                              </Button>
+                              <Button>
+                                <FaEdit />{" "}
+                              </Button>
+                            </div>
+                          </TableCell>
+                          <TableCell>
+                            <div className="space-x-4 flex justify-center ">
+                              <Button>
+                                <GrView />
+                              </Button>
+                              <Button>
+                                <FaEdit />{" "}
+                              </Button>
+                            </div>
+                          </TableCell>
+                          <TableCell>
+                            <div className="space-x-4 flex justify-center ">
+                              <Button>
+                                <GrView />
+                              </Button>
+                              <Button>
+                                <FaEdit />{" "}
+                              </Button>
+                            </div>
+                          </TableCell>
+                          <TableCell>
+                            <div className="space-x-4 flex justify-center ">
+                              <Button>
+                                <GrView />
+                              </Button>
+                              <Button>
+                                <FaEdit />{" "}
+                              </Button>
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      </Table>
+                    </AccordionContent>
+                  </AccordionItem>
                 </Accordion>
               </AccordionContent>
             </AccordionItem>

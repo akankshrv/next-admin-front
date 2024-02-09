@@ -21,12 +21,12 @@ import {
 import Link from "next/link";
 import { GrView } from "react-icons/gr";
 import { IoIosRefresh, IoIosAddCircleOutline } from "react-icons/io";
-import Authdialog from "./Dialogs/Authdialog";
-import ViewcompanyDialog from "./Dialogs/ViewcompanyDialog";
-import RegisteredOfficeDialog from "./Dialogs/RegisteredOfficeDialog";
-import BankAccountDialog from "./Dialogs/BankAccountDialog";
-import DirectorsDialog from "./Dialogs/DirectorsDialog";
-import ManufacturingDetailsDialog from "./Dialogs/ManufacturingDetailsDialog";
+import Authdialog from "./Dialogs/PartADialogs/Authdialog";
+import ViewcompanyDialog from "./Dialogs/PartADialogs/ViewcompanyDialog";
+import RegisteredOfficeDialog from "./Dialogs/PartADialogs/RegisteredOfficeDialog";
+import BankAccountDialog from "./Dialogs/PartADialogs/BankAccountDialog";
+import DirectorsDialog from "./Dialogs/PartADialogs/DirectorsDialog";
+import ManufacturingDetailsDialog from "./Dialogs/PartADialogs/ManufacturingDetailsDialog";
 
 const formSchema = z.object({
   name: z.string(),

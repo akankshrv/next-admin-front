@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/table";
 import { GrView } from "react-icons/gr";
 import { IoIosRefresh } from "react-icons/io";
-import Authdialog from "./Authdialog";
+import Authdialog from "../PartADialogs/Authdialog";
 import { Props } from "@/index";
 import { Card } from "@/components/ui/card";
 
