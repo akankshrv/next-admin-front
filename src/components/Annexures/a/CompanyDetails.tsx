@@ -64,14 +64,14 @@ const CompanyDetails = () => {
           <Button className="">Company Details</Button>
           <Button>Warehouse Details</Button>
         </div> */}
-      <h1 className="text-center p-10">Annexure A - Part 1</h1>
-      <div className="px-14 w-full flex flex-col gap-4 pb-10 ">
+      <div className="w-full flex flex-col gap-4 p-10 ">
         <Accordion
           type="single"
           collapsible
           defaultValue="item-1"
-          className="w-full"
+          className="w-full p-10 rounded-2xl  bg-black/5"
         >
+          <h1 className="">Annexure A - Part 1</h1>
           <AccordionItem value="item-1">
             <AccordionTrigger>
               <h1 className="text-2xl font-semibold">Company Registration</h1>
@@ -101,7 +101,7 @@ const CompanyDetails = () => {
                         <IoIosRefresh />{" "}
                       </Button>
 
-                      <ViewcompanyDialog isEdit={false}/>
+                      <ViewcompanyDialog isEdit={false} />
                     </div>
                   </TableCell>
                 </TableRow>
@@ -142,7 +142,7 @@ const CompanyDetails = () => {
                         <IoIosRefresh />
                       </Button>
 
-                      <RegisteredOfficeDialog isEdit={false}/>
+                      <RegisteredOfficeDialog isEdit={false} />
                     </div>
                   </TableCell>
                 </TableRow>
@@ -178,7 +178,7 @@ const CompanyDetails = () => {
                         <IoIosRefresh />
                       </Button>
 
-                      <BankAccountDialog isEdit={false}/>
+                      <BankAccountDialog isEdit={false} />
                     </div>
                   </TableCell>
                 </TableRow>
@@ -212,7 +212,7 @@ const CompanyDetails = () => {
                       <Button>
                         <IoIosRefresh />
                       </Button>
-                      <DirectorsDialog isEdit={false}/>
+                      <DirectorsDialog isEdit={false} />
                     </div>
                   </TableCell>
                 </TableRow>
@@ -247,7 +247,7 @@ const CompanyDetails = () => {
                       <Button>
                         <IoIosRefresh />
                       </Button>
-                     
+
                       <Authdialog isEdit={false} />
                     </div>
                   </TableCell>
@@ -262,8 +262,7 @@ const CompanyDetails = () => {
             </AccordionTrigger>
             <AccordionContent className="space-y-3 p-2 mb-1">
               <div className="flex justify-end">
-                
-                  <ManufacturingDetailsDialog isEdit={true}/>
+                <ManufacturingDetailsDialog isEdit={true} />
               </div>
 
               <Table>
@@ -290,7 +289,7 @@ const CompanyDetails = () => {
                       <Button>
                         <IoIosRefresh />
                       </Button>
-                      <ManufacturingDetailsDialog isEdit={false}/>
+                      <ManufacturingDetailsDialog isEdit={false} />
                     </div>
                   </TableCell>
                 </TableRow>

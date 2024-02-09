@@ -1,16 +1,19 @@
 "use client";
 import React, { useState } from "react";
-import { Button } from "../../ui/button";
-import CompanyDetails from "./CompanyDetails";
-import WarehouseDetails from "./WarehouseDetails";
+import { Button } from "../../../ui/button";
+import CompanyDetails from "../CompanyDetails";
+import WarehouseDetails from "../WarehouseDetails";
 import Link from "next/link";
 import classnames from "classnames";
-import CustomOnlySection from "./CustomOnlySection";
+import CustomOnlySection from "../CustomOnlySection";
+import CompanyApproval from "../CustomsComponents/CompanyApproval";
+import WareHouseApproval from "../CustomsComponents/WareHouseApproval";
+import IssueOfLicence from "../CustomsComponents/IssueOfLicence";
 
-const TopTabs = () => {
+const CustomsTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index : number) => {
+  const handleTabClick = (index) => {
     setActiveTab(index);
   };
 
@@ -29,7 +32,7 @@ const TopTabs = () => {
                   : "text-2xl"
               }
             >
-              Company Registration
+              Company Approval
             </Button>
           </Link>
         </div>
@@ -45,7 +48,7 @@ const TopTabs = () => {
                   : "text-2xl"
               }
             >
-              Warehouse
+              Warehouse Approval
             </Button>
           </Link>
         </div>
@@ -61,7 +64,7 @@ const TopTabs = () => {
                   : "text-2xl"
               }
             >
-              Customs Only
+              Issue of License
             </Button>
           </Link>
         </div>
@@ -70,17 +73,17 @@ const TopTabs = () => {
       <div>
         {activeTab === 0 && (
           <div>
-            <CompanyDetails />
+            <CompanyApproval />
           </div>
         )}
         {activeTab === 1 && (
           <div>
-            <WarehouseDetails />
+            <WareHouseApproval />
           </div>
         )}
         {activeTab === 2 && (
           <div>
-            <CustomOnlySection />
+            <IssueOfLicence />
           </div>
         )}
       </div>
@@ -88,4 +91,4 @@ const TopTabs = () => {
   );
 };
 
-export default TopTabs;
+export default CustomsTabs;

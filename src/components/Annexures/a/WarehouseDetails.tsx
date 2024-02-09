@@ -20,17 +20,20 @@ import { IoIosRefresh, IoIosAddCircleOutline } from "react-icons/io";
 import { FaEdit } from "react-icons/fa";
 import IndividualWarehouseDialog from "./Dialogs/PartBDialogs/IndividualWarehouseDialog";
 import MainInfoDialog from "./Dialogs/PartBDialogs/MainInfoDialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { DatePicker } from "@/components/ui/datepicker";
 const WarehouseDetails = () => {
   return (
     <>
-      <h1 className="text-center p-10">Annexure A - Part 2</h1>
-      <div className="px-14 w-full flex flex-col gap-4 pb-10 ">
+      <div className="w-full flex flex-col gap-4 p-10 ">
         <Accordion
           type="single"
           collapsible
           defaultValue="item-1"
-          className="w-full"
+          className="w-full p-10 rounded-2xl  bg-black/5"
         >
+          <h1 className="">Annexure A - Part 2</h1>
           <AccordionItem value="item-1">
             <AccordionTrigger>
               <h1 className="text-2xl font-semibold">Warehouse List</h1>
@@ -264,6 +267,30 @@ const WarehouseDetails = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
+          <div className="flex justify-end p-5">
+            <div className="flex items-center flex-col gap-4 p-10">
+              <Input
+                type="text"
+                className="w-96 border-2 border-black"
+                placeholder="Signature"
+              />
+              <p>(Signature of the applicant/authorized signatory)</p>
+            </div>
+          </div>
+          <div>
+            <h1>Stamp</h1>
+            <div className="flex flex-row gap-4 items-center py-5">
+              <Label className="text-xl">Date:</Label>
+              <DatePicker />
+            </div>
+            <div className="flex flex-row gap-4 items-center py-5">
+              <Label className="text-xl">Place:</Label>
+              <Input type="text" className="ml-3 w-96" />
+            </div>
+          </div>
+          <div className="flex justify-center p-2">
+            <Button className="w-40">Submit</Button>
+          </div>
         </Accordion>
       </div>
     </>
