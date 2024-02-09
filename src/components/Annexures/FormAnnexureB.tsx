@@ -14,7 +14,7 @@ import {
 const FormAnnexureB = () => {
   return (
     <div>
-      <Link href="/dashboard/annexures/a">
+      <Link href="/dashboard/annexures">
         <Button className="w-12 h-12 mt-5 ml-10">
           <BsFillArrowLeftCircleFill className="w-24 h-24" />
         </Button>

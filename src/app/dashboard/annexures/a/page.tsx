@@ -1,12 +1,13 @@
 // "use client";
 
-import Tabs from "@/components/Annexures/a/Tabs";
 
+import TopTabs from "@/components/Annexures/a/Tabs/TopTabs";
 
 export default function AnnexureA() {
   return (
-    <>  
-      <Tabs />
+    <>
+    
+      <TopTabs />
     </>
   );
 }
