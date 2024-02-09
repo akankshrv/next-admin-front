@@ -30,6 +30,9 @@ import { IoIosRefresh } from "react-icons/io";
 import Authdialog from "../PartADialogs/Authdialog";
 import { Props } from "@/index";
 import MainInfoDialog from "./MainInfoDialog";
+import PremisesDetailsDialog from "./PremisesDetailsDialog";
+import GoodsDetailsDialog from "./GoodsDetailsDialog";
+import SecurityFacilityDialog from "./SecurityFacilityDialog";
 
 export default function IndividualWarehouseDialog({
   isEdit,
@@ -42,8 +45,8 @@ export default function IndividualWarehouseDialog({
             {isEdit ? <FaEdit /> : <GrView />}
           </Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px] min-w-[1200px] min-h-[800px] p-10">
-          <DialogHeader className="-mb-36">
+        <DialogContent className="sm:max-w-[425px] min-w-[1300px] min-h-[1000px] p-10">
+          <DialogHeader className="">
             <DialogTitle>
               <h1>Details of Warehouse License</h1>
             </DialogTitle>
@@ -54,165 +57,164 @@ export default function IndividualWarehouseDialog({
             </DialogDescription>
           </DialogHeader>
 
-          <Accordion
-            type="single"
-            collapsible
-            defaultValue="item-0"
-            className="w-full "
-          >
-            <AccordionItem value="item-0">
-              <AccordionTrigger>
-                <h1 className="text-2xl font-semibold">
-                  If issued earlier to the applicant:{" "}
-                </h1>
-              </AccordionTrigger>
-              <AccordionContent className="flex justify-center">
-                <Accordion
-                  type="single"
-                  collapsible
-                  defaultValue="item-0"
-                  className="w-[95%]"
-                >
-                  <AccordionItem value="item-0">
-                    <AccordionTrigger>
-                      <h1 className="text-3xl font-normal ">Main Info</h1>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <Table>
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead>Date Of Issue</TableHead>
-                            <TableHead>Commisionerate File No.</TableHead>
-                            <TableHead>
-                              Attachment of warehouse License
-                            </TableHead>
-                            <TableHead>Is Licensed CustomsBroker?</TableHead>
-                            <TableHead>
-                              Is Authorized Economic Operator?
-                            </TableHead>
-                            <TableHead className="text-center">
-                              Actions
-                            </TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableRow>
-                          <TableCell>12-2-2023</TableCell>
-                          <TableCell>123</TableCell>
-                          <TableCell>
-                            <div className="flex text-xl font-semibold flex-col items-center space-y-4 md:flex-row md:items-center md:space-x-4 md:gap-10">
-                              Added
-                              <Button>
-                                <GrView />
-                              </Button>
-                            </div>
-                          </TableCell>
-                          <TableCell className="text-xl font-semibold">
-                            No
-                          </TableCell>
-                          <TableCell className="text-xl font-semibold">
-                            No
-                          </TableCell>
-                          <TableCell>
-                            <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                              {isEdit ? (
-                                <>
-                                  <MainInfoDialog isEdit={true} />
-                                  <MainInfoDialog isEdit={false} />
-                                </>
-                              ) : (
-                                <MainInfoDialog isEdit={false} />
-                              )}
-                            </div>
-                          </TableCell>
-                        </TableRow>
-                      </Table>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger>
-                      <h1 className="text-3xl font-normal ">
-                        Additional Checks
-                      </h1>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <Table>
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead className="text-center">
-                              Description of Premises{" "}
-                            </TableHead>
-                            <TableHead className="text-center">
-                              Goods Proposed to be Manufactured
-                            </TableHead>
-                            <TableHead className="text-center">
-                              Security Facilities at the Premises
-                            </TableHead>
-                            <TableHead className="text-center">
-                              Security Measures
-                            </TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableRow>
-                          <TableCell>
-                            <div className="space-x-4 flex justify-center ">
-                              <Button>
-                                <GrView />
-                              </Button>
-                              <Button>
-                                <FaEdit />{" "}
-                              </Button>
-                            </div>
-                          </TableCell>
-                          <TableCell>
-                            <div className="space-x-4 flex justify-center ">
-                              <Button>
-                                <GrView />
-                              </Button>
-                              <Button>
-                                <FaEdit />{" "}
-                              </Button>
-                            </div>
-                          </TableCell>
-                          <TableCell>
-                            <div className="space-x-4 flex justify-center ">
-                              <Button>
-                                <GrView />
-                              </Button>
-                              <Button>
-                                <FaEdit />{" "}
-                              </Button>
-                            </div>
-                          </TableCell>
-                          <TableCell>
-                            <div className="space-x-4 flex justify-center ">
-                              <Button>
-                                <GrView />
-                              </Button>
-                              <Button>
-                                <FaEdit />{" "}
-                              </Button>
-                            </div>
-                          </TableCell>
-                        </TableRow>
-                      </Table>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
-          {isEdit ? (
-            <DialogFooter>
-              <Button>Submit</Button>
-            </DialogFooter>
-          ) : (
-            <div className="hidden">
-              <DialogFooter>
-                <Button>Submit</Button>
-              </DialogFooter>
+          <div className="static">
+            <div className="absolute top-40 ">
+              <div className="w-full ">
+                <div>
+                  <div>
+                    <h1 className="">If issued earlier to the applicant: </h1>
+                  </div>
+                  <div className="flex justify-center mt-10">
+                    <div className="space-y-10">
+                      <div>
+                        <div>
+                          <h1 className="text-3xl font-normal ">Main Info</h1>
+                        </div>
+                        <div>
+                          <Table>
+                            <TableHeader>
+                              <TableRow>
+                                <TableHead>Date Of Issue</TableHead>
+                                <TableHead>Commisionerate File No.</TableHead>
+                                <TableHead>
+                                  Attachment of warehouse License
+                                </TableHead>
+                                <TableHead>
+                                  Is Licensed CustomsBroker?
+                                </TableHead>
+                                <TableHead>
+                                  Is Authorized Economic Operator?
+                                </TableHead>
+                                <TableHead className="text-center">
+                                  Actions
+                                </TableHead>
+                              </TableRow>
+                            </TableHeader>
+                            <TableRow>
+                              <TableCell>12-2-2023</TableCell>
+                              <TableCell>123</TableCell>
+                              <TableCell>
+                                <div className="flex text-xl font-semibold flex-col items-center space-y-4 md:flex-row md:items-center md:space-x-4 md:gap-10">
+                                  Added
+                                  <Button>
+                                    <GrView />
+                                  </Button>
+                                </div>
+                              </TableCell>
+                              <TableCell className="text-xl font-semibold">
+                                No
+                              </TableCell>
+                              <TableCell className="text-xl font-semibold">
+                                No
+                              </TableCell>
+                              <TableCell>
+                                <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                                  {isEdit ? (
+                                    <>
+                                      <MainInfoDialog isEdit={true} />
+                                      <MainInfoDialog isEdit={false} />
+                                    </>
+                                  ) : (
+                                    <MainInfoDialog isEdit={false} />
+                                  )}
+                                </div>
+                              </TableCell>
+                            </TableRow>
+                          </Table>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <h1 className="text-3xl font-normal ">
+                            Additional Checks
+                          </h1>
+                        </div>
+                        <div>
+                          <Table>
+                            <TableHeader>
+                              <TableRow>
+                                <TableHead className="text-center">
+                                  Description of Premises{" "}
+                                </TableHead>
+                                <TableHead className="text-center">
+                                  Goods Proposed to be Manufactured
+                                </TableHead>
+                                <TableHead className="text-center">
+                                  Security Facilities at the Premises
+                                </TableHead>
+                                <TableHead className="text-center">
+                                  Security Measures
+                                </TableHead>
+                              </TableRow>
+                            </TableHeader>
+                            <TableRow>
+                              <TableCell>
+                                <div className="space-x-4 flex justify-center ">
+                                  {isEdit ? (
+                                    <>
+                                      <PremisesDetailsDialog isEdit={true} />
+                                      <PremisesDetailsDialog isEdit={false} />
+                                    </>
+                                  ) : (
+                                    <PremisesDetailsDialog isEdit={false} />
+                                  )}
+                                </div>
+                              </TableCell>
+                              <TableCell>
+                                <div className="space-x-4 flex justify-center ">
+                                  {isEdit ? (
+                                    <>
+                                      <GoodsDetailsDialog isEdit={true} />
+                                      <GoodsDetailsDialog isEdit={false} />
+                                    </>
+                                  ) : (
+                                    <GoodsDetailsDialog isEdit={false} />
+                                  )}
+                                </div>
+                              </TableCell>
+                              <TableCell>
+                                <div className="space-x-4 flex justify-center ">
+                                  {isEdit ? (
+                                    <>
+                                      <SecurityFacilityDialog isEdit={true} />
+                                      <SecurityFacilityDialog isEdit={false} />
+                                    </>
+                                  ) : (
+                                    <SecurityFacilityDialog isEdit={false} />
+                                  )}
+                                </div>
+                              </TableCell>
+                              <TableCell>
+                                <div className="space-x-4 flex justify-center ">
+                                  {isEdit ? (
+                                    <>
+                                      <SecurityFacilityDialog isEdit={true} />
+                                      <SecurityFacilityDialog isEdit={false} />
+                                    </>
+                                  ) : (
+                                    <SecurityFacilityDialog isEdit={false} />
+                                  )}
+                                </div>
+                              </TableCell>
+                            </TableRow>
+                          </Table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          )}
+            <div className="absolute bottom-0 right-0">
+              {isEdit ? (
+                <Button className="w-96 p-1 mb-10 mr-10">Submit</Button>
+              ) : (
+                <div className="hidden">
+                  <Button className="w-96 p-1 mb-10 mr-10">Submit</Button>
+                </div>
+              )}
+            </div>
+          </div>
         </DialogContent>
       </Dialog>
     </>

@@ -1,9 +1,26 @@
-import React from 'react'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import React from "react";
 
 function CompanyApproval() {
   return (
-    <div>CompanyApproval</div>
-  )
+    <>
+      <Card className="aboslute top-60">
+        <CardHeader>
+          <CardTitle className="text-center">Company Approval- Form</CardTitle>
+          <CardDescription className="text-center">
+            Coming Soon........
+          </CardDescription>
+        </CardHeader>
+        <CardContent></CardContent>
+      </Card>
+    </>
+  );
 }
 
-export default CompanyApproval
+export default CompanyApproval;

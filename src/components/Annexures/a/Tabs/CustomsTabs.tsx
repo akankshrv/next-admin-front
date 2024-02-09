@@ -28,8 +28,8 @@ const CustomsTabs = () => {
             <Button
               className={
                 activeTab === 0
-                  ? "active-link text-2xl bg-blue-500 transition-colors hover:bg-blue-800"
-                  : "text-2xl"
+                  ? "active-link text-md bg-blue-500 transition-colors hover:bg-blue-800"
+                  : "text-md"
               }
             >
               Company Approval
@@ -44,8 +44,8 @@ const CustomsTabs = () => {
             <Button
               className={
                 activeTab === 1
-                  ? "active-link text-2xl bg-blue-500 transition-colors hover:bg-blue-800"
-                  : "text-2xl"
+                  ? "active-link text-md bg-blue-500 transition-colors hover:bg-blue-800"
+                  : "text-md"
               }
             >
               Warehouse Approval
@@ -60,8 +60,8 @@ const CustomsTabs = () => {
             <Button
               className={
                 activeTab === 2
-                  ? "active-link text-2xl bg-blue-500 transition-colors hover:bg-blue-800"
-                  : "text-2xl"
+                  ? "active-link text-md bg-blue-500 transition-colors hover:bg-blue-800"
+                  : "text-md"
               }
             >
               Issue of License

@@ -9,7 +9,8 @@ import {
 import IndividualWarehouseDialog from "./Dialogs/PartBDialogs/IndividualWarehouseDialog";
 import { Card } from "@/components/ui/card";
 import TopTabs from "./Tabs/TopTabs";
-import CustomsTabs from "./Tabs/CustomsTabs";
+
+import WareHouseApprovalDialog from "./Dialogs/CustomsOnlyDialogs/WareHouseApprovalDialog";
 
 const CustomOnlySection = () => {
   return (
@@ -18,11 +19,11 @@ const CustomOnlySection = () => {
         <Card className="w-full p-10 rounded-2xl  bg-black/5 border-none">
           <h1>Customs Review </h1>
           <Table>
-            <TableHeader>
+            <TableHeader className="text-xl ">
               <TableRow>
-                <TableHead className="w-[10%]">Company </TableHead>
-                <TableHead className="w-[15%]">Warehouse </TableHead>
-                <TableHead className="w-[15%]">Status</TableHead>
+                <TableHead className="w-[20%]">Company </TableHead>
+                <TableHead className="w-[10%]">Warehouse </TableHead>
+                <TableHead className="w-[10%]">Status</TableHead>
                 <TableHead className="w-[20%]">License renewal due</TableHead>
                 <TableHead className="w-[20%]">Bond Renewal due</TableHead>
                 <TableHead className="w-[20%] text-center">Review</TableHead>
@@ -37,9 +38,9 @@ const CustomOnlySection = () => {
               <TableCell>
                 <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
                   {/* thesee are the icons in the table */}
-                  <IndividualWarehouseDialog isEdit={false} />
+                  <WareHouseApprovalDialog isEdit={false} />
 
-                  <IndividualWarehouseDialog isEdit={true} />
+                  <WareHouseApprovalDialog isEdit={true} />
                 </div>
               </TableCell>
             </TableRow>
@@ -72,8 +73,6 @@ const CustomOnlySection = () => {
               </TableCell>
             </TableRow>
           </Table>
-
-          <CustomsTabs />
         </Card>
       </div>
     </>

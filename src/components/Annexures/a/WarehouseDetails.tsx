@@ -30,13 +30,13 @@ const WarehouseDetails = () => {
         <Accordion
           type="single"
           collapsible
-          defaultValue="item-1"
+          
           className="w-full p-10 rounded-2xl  bg-black/5"
         >
-          <h1 className="">Annexure A - Part 2</h1>
+          <h1 className="text-4xl">Annexure A - Part 2</h1>
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Warehouse List</h1>
+              <h1 className="">Warehouse List</h1>
             </AccordionTrigger>
             <AccordionContent className="space-y-10 p-10">
               <Table>
@@ -105,7 +105,7 @@ const WarehouseDetails = () => {
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Warehouse Registration</h1>
+              <h1 className="">Warehouse Registration</h1>
             </AccordionTrigger>
             <AccordionContent>
               <Table>
@@ -161,9 +161,7 @@ const WarehouseDetails = () => {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">
-                Contact details at the site/premises
-              </h1>
+              <h1 className="">Contact details at the site/premises</h1>
             </AccordionTrigger>
             <AccordionContent>
               <Table>
@@ -267,30 +265,36 @@ const WarehouseDetails = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
-          <div className="flex justify-end p-5">
-            <div className="flex items-center flex-col gap-4 p-10">
-              <Input
-                type="text"
-                className="w-96 border-2 border-black"
-                placeholder="Signature"
-              />
-              <p>(Signature of the applicant/authorized signatory)</p>
-            </div>
-          </div>
-          <div>
-            <h1>Stamp</h1>
-            <div className="flex flex-row gap-4 items-center py-5">
-              <Label className="text-xl">Date:</Label>
-              <DatePicker />
-            </div>
-            <div className="flex flex-row gap-4 items-center py-5">
-              <Label className="text-xl">Place:</Label>
-              <Input type="text" className="ml-3 w-96" />
-            </div>
-          </div>
-          <div className="flex justify-center p-2">
-            <Button className="w-40">Submit</Button>
-          </div>
+          <AccordionItem value="item-6">
+            <AccordionTrigger>
+              <h1>Stamp</h1>
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="flex justify-end p-5">
+                <div className="flex items-center flex-col gap-4 p-10">
+                  <Input
+                    type="text"
+                    className="w-96 border-2 border-black"
+                    placeholder="Signature"
+                  />
+                  <p>(Signature of the applicant/authorized signatory)</p>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-row gap-4 items-center py-5">
+                  <Label className="text-xl">Date:</Label>
+                  <DatePicker />
+                </div>
+                <div className="flex flex-row gap-4 items-center py-5">
+                  <Label className="text-xl">Place:</Label>
+                  <Input type="text" className="ml-3 w-96" />
+                </div>
+              </div>
+              <div className="flex justify-center p-2">
+                <Button className="w-40">Submit</Button>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
     </>

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @layer utilities {
   .modal {
     @apply w-[100%] max-w-[1200px] h-auto max-h-[500px] border-none 
@@ -81,7 +82,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground zoom-in-90 overflow-y-auto overflow-x-hidden; 
   }
 }
 
@@ -90,11 +91,14 @@ main, nav {
 }
 
 h1 {
-  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  @apply scroll-m-20 text-xl font-semibold tracking-tight lg:text-2xl;
 }
 
 h2 {
-  @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+  @apply scroll-m-20 pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0;
+}
+p {
+  @apply text-lg
 }
 
 .modal-backdrop {

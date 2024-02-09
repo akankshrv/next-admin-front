@@ -71,10 +71,10 @@ const CompanyDetails = () => {
           defaultValue="item-1"
           className="w-full p-10 rounded-2xl  bg-black/5"
         >
-          <h1 className="">Annexure A - Part 1</h1>
+          <h1 className="text-4xl ">Annexure A - Part 1</h1>
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Company Registration</h1>
+              <h1 className="">Company Registration</h1>
             </AccordionTrigger>
             <AccordionContent className="space-y-10 p-10">
               <Table>
@@ -113,7 +113,7 @@ const CompanyDetails = () => {
 
           <AccordionItem value="item-2">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Registered Office</h1>
+              <h1 className="">Registered Office</h1>
             </AccordionTrigger>
             <AccordionContent className="space-y-10 p-10">
               <Table>
@@ -152,7 +152,7 @@ const CompanyDetails = () => {
 
           <AccordionItem value="item-3">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Bank Account Details</h1>
+              <h1 className="">Bank Account Details</h1>
             </AccordionTrigger>
             <AccordionContent className="space-y-10 p-10">
               <Table>
@@ -187,7 +187,7 @@ const CompanyDetails = () => {
           </AccordionItem>
           <AccordionItem value="item-4">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Directors</h1>
+              <h1 className="">Directors</h1>
             </AccordionTrigger>
 
             <AccordionContent>
@@ -222,7 +222,7 @@ const CompanyDetails = () => {
 
           <AccordionItem value="item-5">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Authorized Person</h1>
+              <h1 className="">Authorized Person</h1>
             </AccordionTrigger>
 
             <AccordionContent className="space-y-5 p-10">
@@ -258,7 +258,7 @@ const CompanyDetails = () => {
 
           <AccordionItem value="item-6">
             <AccordionTrigger>
-              <h1 className="text-2xl font-semibold">Manufacturing Details</h1>
+              <h1 className="">Manufacturing Details</h1>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 p-2 mb-1">
               <div className="flex justify-end">
