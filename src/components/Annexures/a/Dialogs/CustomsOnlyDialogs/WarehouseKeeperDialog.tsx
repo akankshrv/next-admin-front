@@ -11,49 +11,55 @@ import { Props } from "@/index";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import React from "react";
 import {
-  ApprovedCompany,
-  PendingApprovedCompany,
+  ApprovedWarehouse,
+  PendingApprovedWarehouse,
 } from "../../CustomsComponents";
+import CommissionerApproved from "../../CustomsComponents/IssueofLicense/CommisionerApproved";
+import WarehouseKeeperDetails from "../../CustomsComponents/IssueofLicense/WarehouseKeeperDetails";
 
-export default function CompanyApprovalDialog({ isEdit }: Props): JSX.Element {
+export default function WarehouseKeeperDialog({ isEdit }: Props): JSX.Element {
   return (
     <>
       <Dialog>
         <DialogTrigger>
-          <Button variant="default" className="">
-            {isEdit ? "Pending" : "Approved"}
+          <Button
+            variant="default"
+            className={
+              isEdit ? "bg-red-700 text-white" : "bg-green-500 text-white"
+            }
+          >
+            {
+              isEdit ? "Submit" : "View" 
+            }
+           
           </Button>
         </DialogTrigger>
         <DialogContent
           className={
-            isEdit
+            false
               ? "min-w-[1200px] min-h-[700px]"
-              : "min-w-[1200px] min-h-[600px]"
+              : "min-h-[700px] min-w-[1200px]"
           }
         >
           <div>
             <DialogHeader>
-              <DialogTitle className="text-xl">Company Approval</DialogTitle>
-              {isEdit ? (
-                <DialogDescription>
-                  Please do the necessary Approval checks for the warehouse.
-                </DialogDescription>
-              ) : (
-                <DialogDescription>
-                  The Company has been approved.
-                </DialogDescription>
-              )}
+              <DialogTitle className="text-xl">
+                WareHouse Keeper Details 
+              </DialogTitle>
+              <DialogDescription>
+                Details of the Warehouse Keeper appointed by the Licensee.
+              </DialogDescription>
             </DialogHeader>
           </div>
           <div className="static">
-            <div className="absolute top-20 left-10">
+            <div className="absolute top-28 left-10">
               {isEdit ? (
                 <>
-                  <PendingApprovedCompany />
+                  <WarehouseKeeperDetails isEdit={isEdit}/>
                 </>
               ) : (
                 <>
-                  <ApprovedCompany />{" "}
+                  <WarehouseKeeperDetails isEdit={isEdit}/>{" "}
                 </>
               )}
             </div>

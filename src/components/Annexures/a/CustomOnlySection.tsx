@@ -14,6 +14,8 @@ import TopTabs from "./Tabs/TopTabs";
 import WareHouseApprovalDialog from "./Dialogs/CustomsOnlyDialogs/WareHouseApprovalDialog";
 import { Button } from "@/components/ui/button";
 import CompanyApprovalDialog from "./Dialogs/CustomsOnlyDialogs/CompanyApprovalDialog";
+import IssuePartOneDialog from "./Dialogs/CustomsOnlyDialogs/IssuePartOneDialog";
+import CustomsSignatureDialog from "./Dialogs/CustomsOnlyDialogs/CustomsSignatureDialog";
 
 const CustomOnlySection = () => {
   return (
@@ -25,10 +27,10 @@ const CustomOnlySection = () => {
 
             <div className="flex flex-row gap-2 items-center">
               <h1>Company Approval: </h1>
-              <CompanyApprovalDialog isEdit={false} />
+              <CompanyApprovalDialog isEdit={true} />
             </div>
           </div>
-          <h1 className="mt-10">Customs WareHouse Review</h1>
+          <h1 className="mt-5">Customs WareHouse Review</h1>
 
           <h2 className="mt-2">Pending Approvals</h2>
           <Table>
@@ -75,6 +77,9 @@ const CustomOnlySection = () => {
                     <IndividualWarehouseDialog isEdit={true} />
                   </div>
                 </TableCell>
+                <TableCell>
+                  <WareHouseApprovalDialog isEdit={false} />
+                </TableCell>
               </TableRow>
 
               <TableRow>
@@ -90,9 +95,24 @@ const CustomOnlySection = () => {
                     <IndividualWarehouseDialog isEdit={true} />
                   </div>
                 </TableCell>
+                <TableCell>
+                  <WareHouseApprovalDialog isEdit={false} />
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>
+
+          <h1>Issue of Licence : </h1>
+          <div className="flex flex-row gap-3">
+
+          <IssuePartOneDialog isEdit={true}/>
+         <CustomsSignatureDialog isEdit={true}/>
+          </div>
+          <div className="flex flex-row gap-3 mt-2">
+
+          <IssuePartOneDialog isEdit={false}/>
+         <CustomsSignatureDialog isEdit={false}/>
+          </div>
         </Card>
       </div>
     </>

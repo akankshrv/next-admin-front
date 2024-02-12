@@ -11,49 +11,54 @@ import { Props } from "@/index";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import React from "react";
 import {
-  ApprovedCompany,
-  PendingApprovedCompany,
+  ApprovedWarehouse,
+  PendingApprovedWarehouse,
 } from "../../CustomsComponents";
+import CommissionerApproved from "../../CustomsComponents/IssueofLicense/CommisionerApproved";
 
-export default function CompanyApprovalDialog({ isEdit }: Props): JSX.Element {
+export default function IssuePartOneDialog({ isEdit }: Props): JSX.Element {
   return (
     <>
       <Dialog>
         <DialogTrigger>
-          <Button variant="default" className="">
-            {isEdit ? "Pending" : "Approved"}
+          <Button
+            variant="default"
+            className={
+              isEdit ? "bg-red-700 text-white" : "bg-green-500 text-white"
+            }
+          >
+            Commissioner's Approval
           </Button>
         </DialogTrigger>
         <DialogContent
           className={
             isEdit
-              ? "min-w-[1200px] min-h-[700px]"
-              : "min-w-[1200px] min-h-[600px]"
+              ? "min-w-[1200px] min-h-[600px]"
+              : "min-h-[600px] min-w-[1200px]"
           }
         >
           <div>
             <DialogHeader>
-              <DialogTitle className="text-xl">Company Approval</DialogTitle>
-              {isEdit ? (
-                <DialogDescription>
-                  Please do the necessary Approval checks for the warehouse.
-                </DialogDescription>
-              ) : (
-                <DialogDescription>
-                  The Company has been approved.
-                </DialogDescription>
-              )}
+              <DialogTitle className="text-xl">
+                Commisioner Approval
+              </DialogTitle>
+              <DialogDescription>
+                Upon the satisfaction of the Commissioner that the licence may
+                be granted, the following shall be obtained from the applicant
+                (Please refer Regulation 4 of Private Warehouse Licensing
+                Regulations, 2016)
+              </DialogDescription>
             </DialogHeader>
           </div>
           <div className="static">
-            <div className="absolute top-20 left-10">
+            <div className="absolute top-28 left-10">
               {isEdit ? (
                 <>
-                  <PendingApprovedCompany />
+                  <CommissionerApproved isEdit={isEdit}/>
                 </>
               ) : (
                 <>
-                  <ApprovedCompany />{" "}
+                  <CommissionerApproved isEdit={isEdit}/>{" "}
                 </>
               )}
             </div>

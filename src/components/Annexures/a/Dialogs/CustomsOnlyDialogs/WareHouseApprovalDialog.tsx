@@ -24,12 +24,12 @@ export default function WareHouseApprovalDialog({
             {isEdit ? "Pending": "Approved"}
           </Button>
         </DialogTrigger>
-        <DialogContent className="min-w-[1200px] min-h-[700px] ">
+        <DialogContent className={isEdit ? "min-w-[1200px] min-h-[700px]": "min-h-[550px] min-w-[1200px]"}>
           <div>
             <DialogHeader className="">
               <DialogTitle className="text-xl">Ware House Approval</DialogTitle>
               <DialogDescription>
-                Please do the necessary Approval checks for the warehouse.
+               
               </DialogDescription>
             </DialogHeader>
           </div>
