@@ -13,8 +13,8 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 
 import { FaEdit } from "react-icons/fa";
 import { GrView } from "react-icons/gr";
-import EditGoods from "../../CustomsComponents/EditGoods";
-import ViewGoods from "../../CustomsComponents/ViewGoods";
+import EditGoods from "../../WarehouseComponents/EditGoods";
+import ViewGoods from "../../WarehouseComponents/ViewGoods";
 
 export default function GoodsDetailsDialog({ isEdit }: Props): JSX.Element {
   return (

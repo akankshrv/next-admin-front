@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const CompanyTable = async () => {
   async function getCompanies(): Promise<Companies> {
-    const result = await fetch("http://localhost:3000/api/companies");
+    const result = await fetch(`${process.env.BASE_URL}/api/companies`);
 
     return result.json();
   }

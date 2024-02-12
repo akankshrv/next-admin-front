@@ -13,10 +13,10 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 
 import { FaEdit } from "react-icons/fa";
 import { GrView } from "react-icons/gr";
-import EditGoods from "../../CustomsComponents/EditGoods";
-import ViewGoods from "../../CustomsComponents/ViewGoods";
-import EditSecurityFacility from "../../CustomsComponents/EditSecurityFacility";
-import ViewSecurityFacility from "../../CustomsComponents/ViewSecurityFacility";
+import EditGoods from "../../WarehouseComponents/EditGoods";
+import ViewGoods from "../../WarehouseComponents/ViewGoods";
+import EditSecurityFacility from "../../WarehouseComponents/EditSecurityFacility";
+import ViewSecurityFacility from "../../WarehouseComponents/ViewSecurityFacility";
 
 export default function SecurityFacilityDialog({ isEdit }: Props): JSX.Element {
   return (

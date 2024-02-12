@@ -13,6 +13,7 @@ import {
 } from "../../ui/accordion";
 import {
   Table,
+  TableBody,
   TableCell,
   TableHead,
   TableHeader,
@@ -90,21 +91,26 @@ const CompanyDetails = () => {
                     </TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>Instorein Technologies Private Limited</TableCell>
-                  <TableCell>AAECIO133R1</TableCell>
-                  <TableCell>29AAECIO133R1</TableCell>
-                  <TableCell className="text-center">
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <Button>
-                        {" "}
-                        <IoIosRefresh />{" "}
-                      </Button>
 
-                      <ViewcompanyDialog isEdit={false} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>
+                      Instorein Technologies Private Limited
+                    </TableCell>
+                    <TableCell>AAECIO133R1</TableCell>
+                    <TableCell>29AAECIO133R1</TableCell>
+                    <TableCell className="text-center">
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <Button>
+                          {" "}
+                          <IoIosRefresh />{" "}
+                        </Button>
+
+                        <ViewcompanyDialog isEdit={false} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
 
               {/* <CompanyDetails /> */}
@@ -128,24 +134,27 @@ const CompanyDetails = () => {
                     </TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>
-                    Singapore GardenSgublala Cross, Kanakapura Main Road,
-                    DoddaKalaSandraBangalore NO.19 Karnataka Bengaluru Urban
-                  </TableCell>
-                  <TableCell>9090090909</TableCell>
-                  <TableCell>044 123 4567</TableCell>
-                  <TableCell>company@email.com</TableCell>
-                  <TableCell className="text-center">
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <Button>
-                        <IoIosRefresh />
-                      </Button>
 
-                      <RegisteredOfficeDialog isEdit={false} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>
+                      Singapore GardenSgublala Cross, Kanakapura Main Road,
+                      DoddaKalaSandraBangalore NO.19 Karnataka Bengaluru Urban
+                    </TableCell>
+                    <TableCell>9090090909</TableCell>
+                    <TableCell>044 123 4567</TableCell>
+                    <TableCell>company@email.com</TableCell>
+                    <TableCell className="text-center">
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
+
+                        <RegisteredOfficeDialog isEdit={false} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
             </AccordionContent>
           </AccordionItem>
@@ -167,21 +176,23 @@ const CompanyDetails = () => {
                     </TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>Axis Bank</TableCell>
-                  <TableCell>AAECIO133R1</TableCell>
-                  <TableCell>Bangalore</TableCell>
-                  <TableCell>87421590634218</TableCell>
-                  <TableCell className="text-center">
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <Button>
-                        <IoIosRefresh />
-                      </Button>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Axis Bank</TableCell>
+                    <TableCell>AAECIO133R1</TableCell>
+                    <TableCell>Bangalore</TableCell>
+                    <TableCell>87421590634218</TableCell>
+                    <TableCell className="text-center">
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
 
-                      <BankAccountDialog isEdit={false} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                        <BankAccountDialog isEdit={false} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
             </AccordionContent>
           </AccordionItem>
@@ -204,18 +215,21 @@ const CompanyDetails = () => {
                     </TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>Puneeth Rajkumar</TableCell>
-                  <TableCell>901993992</TableCell>
-                  <TableCell className="text-center">
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <Button>
-                        <IoIosRefresh />
-                      </Button>
-                      <DirectorsDialog isEdit={false} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Puneeth Rajkumar</TableCell>
+                    <TableCell>901993992</TableCell>
+                    <TableCell className="text-center">
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
+                        <DirectorsDialog isEdit={false} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
             </AccordionContent>
           </AccordionItem>
@@ -239,19 +253,21 @@ const CompanyDetails = () => {
                     </TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>Mr. Puneeth Rajkumar</TableCell>
-                  <TableCell>CEO</TableCell>
-                  <TableCell className="text-center">
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <Button>
-                        <IoIosRefresh />
-                      </Button>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Mr. Puneeth Rajkumar</TableCell>
+                    <TableCell>CEO</TableCell>
+                    <TableCell className="text-center">
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
 
-                      <Authdialog isEdit={false} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                        <Authdialog isEdit={false} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
             </AccordionContent>
           </AccordionItem>
@@ -279,20 +295,24 @@ const CompanyDetails = () => {
                     </TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>Bangalore</TableCell>
-                  <TableCell>Instorein Technologies Private Limited</TableCell>
-                  <TableCell>500</TableCell>
-                  <TableCell>Subramaniah Reddy</TableCell>
-                  <TableCell>
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <Button>
-                        <IoIosRefresh />
-                      </Button>
-                      <ManufacturingDetailsDialog isEdit={false} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Bangalore</TableCell>
+                    <TableCell>
+                      Instorein Technologies Private Limited
+                    </TableCell>
+                    <TableCell>500</TableCell>
+                    <TableCell>Subramaniah Reddy</TableCell>
+                    <TableCell>
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
+                        <ManufacturingDetailsDialog isEdit={false} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
             </AccordionContent>
           </AccordionItem>

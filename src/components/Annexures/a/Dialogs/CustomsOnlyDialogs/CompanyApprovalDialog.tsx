@@ -10,42 +10,52 @@ import {
 import { Props } from "@/index";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import React from "react";
-import { ApprovedWarehouse, PendingApprovedWarehouse } from "../../CustomsComponents";
+import {
+  ApprovedCompany,
+  PendingApprovedCompany,
+} from "../../CustomsComponents";
 
-
-export default function WareHouseApprovalDialog({
-  isEdit,
-}: Props): JSX.Element {
+export default function CompanyApprovalDialog({ isEdit }: Props): JSX.Element {
   return (
     <>
       <Dialog>
         <DialogTrigger>
           <Button variant="default" className="">
-            {isEdit ? "Pending": "Approved"}
+            {isEdit ? "Pending" : "Approved"}
           </Button>
         </DialogTrigger>
-        <DialogContent className={isEdit ? "min-w-[1200px] min-h-[700px]": "min-h-[550px] min-w-[1200px]"}>
+        <DialogContent
+          className={
+            isEdit
+              ? "min-w-[1200px] min-h-[700px]"
+              : "min-w-[1200px] min-h-[600px]"
+          }
+        >
           <div>
-            <DialogHeader className="">
-              <DialogTitle className="text-xl">Ware House Approval</DialogTitle>
-              <DialogDescription>
-               
-              </DialogDescription>
+            <DialogHeader>
+              <DialogTitle className="text-xl">Company Approval</DialogTitle>
+              {isEdit ? (
+                <DialogDescription>
+                  Please do the necessary Approval checks for the warehouse.
+                </DialogDescription>
+              ) : (
+                <DialogDescription>
+                  The Company has been approved.
+                </DialogDescription>
+              )}
             </DialogHeader>
           </div>
           <div className="static">
             <div className="absolute top-20 left-10">
-              
-            {isEdit ? (
+              {isEdit ? (
                 <>
-                  <PendingApprovedWarehouse />
+                  <PendingApprovedCompany />
                 </>
               ) : (
                 <>
-                  <ApprovedWarehouse />{" "}
+                  <ApprovedCompany />{" "}
                 </>
               )}
-
             </div>
             <div className="absolute bottom-0 right-0">
               {isEdit ? (

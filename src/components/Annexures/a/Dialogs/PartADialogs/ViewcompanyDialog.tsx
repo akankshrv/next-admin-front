@@ -14,13 +14,6 @@ import { FaEdit } from "react-icons/fa";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Table,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { GrView } from "react-icons/gr";
 import { IoIosRefresh } from "react-icons/io";
 import Authdialog from "./Authdialog";

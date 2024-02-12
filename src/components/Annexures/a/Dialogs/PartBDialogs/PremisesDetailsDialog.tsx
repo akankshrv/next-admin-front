@@ -14,8 +14,8 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 import { FaEdit } from "react-icons/fa";
 import { GrView } from "react-icons/gr";
 import CustomsTabs from "../../Tabs/CustomsTabs";
-import EditPremises from "../../CustomsComponents/EditPremises";
-import ViewPremises from "../../CustomsComponents/ViewPremises";
+import EditPremises from "../../WarehouseComponents/EditPremises";
+import ViewPremises from "../../WarehouseComponents/ViewPremises";
 
 export default function PremisesDetailsDialog({ isEdit }: Props): JSX.Element {
   return (

@@ -1,11 +1,13 @@
-"use client";
+import { Props } from "@/index";
 import { useState } from "react";
 
-const ToggleButton: React.FC = () => {
-    const [isToggled, setIsToggled] = useState(false);
-  
+export default function ToggleButton({ isEdit }: Props){
+    const [isToggled, setIsToggled] = useState(true);
+
     const handleToggle = () => {
-      setIsToggled(prevState => !prevState);
+        if (isEdit) {
+            setIsToggled(prevState => !prevState);
+        }
     };
   
     return (
@@ -22,6 +24,4 @@ const ToggleButton: React.FC = () => {
         </button>
       </div>
     );
-  };
-  
-  export default ToggleButton;
+};

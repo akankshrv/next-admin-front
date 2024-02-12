@@ -22,7 +22,7 @@ export function DatePicker() {
         <Button
           variant={"outline"}
           className={cn(
-            "w-96 justify-start text-left font-normal ml-5",
+            "w-96 justify-start text-left font-normal",
             !date && "text-muted-foreground"
           )}
         >
