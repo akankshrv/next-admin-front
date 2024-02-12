@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/accordion";
 import {
   Table,
+  TableBody,
   TableCell,
   TableHead,
   TableHeader,
@@ -45,7 +46,7 @@ export default function IndividualWarehouseDialog({
             {isEdit ? <FaEdit /> : <GrView />}
           </Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px] min-w-[1300px] min-h-[1000px] p-10">
+        <DialogContent className="sm:max-w-[425px] min-w-[1300px] min-h-[800px] p-10">
           <DialogHeader className="">
             <DialogTitle>
               <h1>Details of Warehouse License</h1>
@@ -90,36 +91,38 @@ export default function IndividualWarehouseDialog({
                                 </TableHead>
                               </TableRow>
                             </TableHeader>
-                            <TableRow>
-                              <TableCell>12-2-2023</TableCell>
-                              <TableCell>123</TableCell>
-                              <TableCell>
-                                <div className="flex text-xl font-semibold flex-col items-center space-y-4 md:flex-row md:items-center md:space-x-4 md:gap-10">
-                                  Added
-                                  <Button>
-                                    <GrView />
-                                  </Button>
-                                </div>
-                              </TableCell>
-                              <TableCell className="text-xl font-semibold">
-                                No
-                              </TableCell>
-                              <TableCell className="text-xl font-semibold">
-                                No
-                              </TableCell>
-                              <TableCell>
-                                <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                                  {isEdit ? (
-                                    <>
-                                      <MainInfoDialog isEdit={true} />
+                            <TableBody>
+                              <TableRow>
+                                <TableCell>12-2-2023</TableCell>
+                                <TableCell>123</TableCell>
+                                <TableCell>
+                                  <div className="flex text-xl font-semibold flex-col items-center space-y-4 md:flex-row md:items-center md:space-x-4 md:gap-10">
+                                    Added
+                                    <Button>
+                                      <GrView />
+                                    </Button>
+                                  </div>
+                                </TableCell>
+                                <TableCell className="text-xl font-semibold">
+                                  No
+                                </TableCell>
+                                <TableCell className="text-xl font-semibold">
+                                  No
+                                </TableCell>
+                                <TableCell>
+                                  <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                                    {isEdit ? (
+                                      <>
+                                        <MainInfoDialog isEdit={true} />
+                                        <MainInfoDialog isEdit={false} />
+                                      </>
+                                    ) : (
                                       <MainInfoDialog isEdit={false} />
-                                    </>
-                                  ) : (
-                                    <MainInfoDialog isEdit={false} />
-                                  )}
-                                </div>
-                              </TableCell>
-                            </TableRow>
+                                    )}
+                                  </div>
+                                </TableCell>
+                              </TableRow>
+                            </TableBody>
                           </Table>
                         </div>
                       </div>
@@ -147,56 +150,62 @@ export default function IndividualWarehouseDialog({
                                 </TableHead>
                               </TableRow>
                             </TableHeader>
-                            <TableRow>
-                              <TableCell>
-                                <div className="space-x-4 flex justify-center ">
-                                  {isEdit ? (
-                                    <>
-                                      <PremisesDetailsDialog isEdit={true} />
+                            <TableBody>
+                              <TableRow>
+                                <TableCell>
+                                  <div className="space-x-4 flex justify-center ">
+                                    {isEdit ? (
+                                      <>
+                                        <PremisesDetailsDialog isEdit={true} />
+                                        <PremisesDetailsDialog isEdit={false} />
+                                      </>
+                                    ) : (
                                       <PremisesDetailsDialog isEdit={false} />
-                                    </>
-                                  ) : (
-                                    <PremisesDetailsDialog isEdit={false} />
-                                  )}
-                                </div>
-                              </TableCell>
-                              <TableCell>
-                                <div className="space-x-4 flex justify-center ">
-                                  {isEdit ? (
-                                    <>
-                                      <GoodsDetailsDialog isEdit={true} />
+                                    )}
+                                  </div>
+                                </TableCell>
+                                <TableCell>
+                                  <div className="space-x-4 flex justify-center ">
+                                    {isEdit ? (
+                                      <>
+                                        <GoodsDetailsDialog isEdit={true} />
+                                        <GoodsDetailsDialog isEdit={false} />
+                                      </>
+                                    ) : (
                                       <GoodsDetailsDialog isEdit={false} />
-                                    </>
-                                  ) : (
-                                    <GoodsDetailsDialog isEdit={false} />
-                                  )}
-                                </div>
-                              </TableCell>
-                              <TableCell>
-                                <div className="space-x-4 flex justify-center ">
-                                  {isEdit ? (
-                                    <>
-                                      <SecurityFacilityDialog isEdit={true} />
+                                    )}
+                                  </div>
+                                </TableCell>
+                                <TableCell>
+                                  <div className="space-x-4 flex justify-center ">
+                                    {isEdit ? (
+                                      <>
+                                        <SecurityFacilityDialog isEdit={true} />
+                                        <SecurityFacilityDialog
+                                          isEdit={false}
+                                        />
+                                      </>
+                                    ) : (
                                       <SecurityFacilityDialog isEdit={false} />
-                                    </>
-                                  ) : (
-                                    <SecurityFacilityDialog isEdit={false} />
-                                  )}
-                                </div>
-                              </TableCell>
-                              <TableCell>
-                                <div className="space-x-4 flex justify-center ">
-                                  {isEdit ? (
-                                    <>
-                                      <SecurityFacilityDialog isEdit={true} />
+                                    )}
+                                  </div>
+                                </TableCell>
+                                <TableCell>
+                                  <div className="space-x-4 flex justify-center ">
+                                    {isEdit ? (
+                                      <>
+                                        <SecurityFacilityDialog isEdit={true} />
+                                        <SecurityFacilityDialog
+                                          isEdit={false}
+                                        />
+                                      </>
+                                    ) : (
                                       <SecurityFacilityDialog isEdit={false} />
-                                    </>
-                                  ) : (
-                                    <SecurityFacilityDialog isEdit={false} />
-                                  )}
-                                </div>
-                              </TableCell>
-                            </TableRow>
+                                    )}
+                                  </div>
+                                </TableCell>
+                              </TableRow>
+                            </TableBody>
                           </Table>
                         </div>
                       </div>

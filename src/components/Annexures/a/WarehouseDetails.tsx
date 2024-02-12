@@ -9,6 +9,7 @@ import {
 } from "../../ui/accordion";
 import {
   Table,
+  TableBody,
   TableCell,
   TableHead,
   TableHeader,
@@ -30,7 +31,6 @@ const WarehouseDetails = () => {
         <Accordion
           type="single"
           collapsible
-          
           className="w-full p-10 rounded-2xl  bg-black/5"
         >
           <h1 className="text-4xl">Annexure A - Part 2</h1>
@@ -54,50 +54,53 @@ const WarehouseDetails = () => {
                     </TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>456</TableCell>
-                  <TableCell>789</TableCell>
-                  <TableCell>Bengaluru</TableCell>
-                  <TableCell>02-08-2024</TableCell>
-                  <TableCell>02-08-2024</TableCell>
-                  <TableCell>
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <IndividualWarehouseDialog isEdit={false} />
 
-                      <IndividualWarehouseDialog isEdit={true} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>456</TableCell>
+                    <TableCell>789</TableCell>
+                    <TableCell>Bengaluru</TableCell>
+                    <TableCell>02-08-2024</TableCell>
+                    <TableCell>02-08-2024</TableCell>
+                    <TableCell>
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <IndividualWarehouseDialog isEdit={false} />
 
-                <TableRow>
-                  <TableCell>321</TableCell>
-                  <TableCell>654</TableCell>
-                  <TableCell>Mysuru</TableCell>
-                  <TableCell>02-08-2024</TableCell>
-                  <TableCell>02-08-2024</TableCell>
-                  <TableCell>
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <IndividualWarehouseDialog isEdit={false} />
+                        <IndividualWarehouseDialog isEdit={true} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
 
-                      <IndividualWarehouseDialog isEdit={true} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                  <TableRow>
+                    <TableCell>321</TableCell>
+                    <TableCell>654</TableCell>
+                    <TableCell>Mysuru</TableCell>
+                    <TableCell>02-08-2024</TableCell>
+                    <TableCell>02-08-2024</TableCell>
+                    <TableCell>
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <IndividualWarehouseDialog isEdit={false} />
 
-                <TableRow>
-                  <TableCell>987</TableCell>
-                  <TableCell>654</TableCell>
-                  <TableCell>Mangaluru</TableCell>
-                  <TableCell>02-08-2024</TableCell>
-                  <TableCell>02-08-2024</TableCell>
-                  <TableCell>
-                    <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <IndividualWarehouseDialog isEdit={false} />
+                        <IndividualWarehouseDialog isEdit={true} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
 
-                      <IndividualWarehouseDialog isEdit={true} />
-                    </div>
-                  </TableCell>
-                </TableRow>
+                  <TableRow>
+                    <TableCell>987</TableCell>
+                    <TableCell>654</TableCell>
+                    <TableCell>Mangaluru</TableCell>
+                    <TableCell>02-08-2024</TableCell>
+                    <TableCell>02-08-2024</TableCell>
+                    <TableCell>
+                      <div className="flex flex-col items-center space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <IndividualWarehouseDialog isEdit={false} />
+
+                        <IndividualWarehouseDialog isEdit={true} />
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
 
               {/* <CompanyDetails /> */}
@@ -120,6 +123,8 @@ const WarehouseDetails = () => {
                     </TableHead>
                     <TableHead className="text-center">Actions</TableHead>
                   </TableRow>
+                </TableHeader>
+                <TableBody>
                   <TableRow>
                     <TableCell>
                       123 Evergreen Terrace, Springfield, Fictional Country,
@@ -135,12 +140,14 @@ const WarehouseDetails = () => {
                             <TableHead>West</TableHead>
                           </TableRow>
                         </TableHeader>
-                        <TableRow>
-                          <TableCell>100</TableCell>
-                          <TableCell>100</TableCell>
-                          <TableCell>100</TableCell>
-                          <TableCell>100</TableCell>
-                        </TableRow>
+                        <TableBody>
+                          <TableRow>
+                            <TableCell>100</TableCell>
+                            <TableCell>100</TableCell>
+                            <TableCell>100</TableCell>
+                            <TableCell>100</TableCell>
+                          </TableRow>
+                        </TableBody>
                       </Table>
                     </TableCell>
                     <TableCell className="text-center text-2xl">Yes</TableCell>
@@ -155,7 +162,7 @@ const WarehouseDetails = () => {
                       </div>
                     </TableCell>
                   </TableRow>
-                </TableHeader>
+                </TableBody>
               </Table>
             </AccordionContent>
           </AccordionItem>
@@ -174,22 +181,24 @@ const WarehouseDetails = () => {
                     <TableHead className="text-center">Actions</TableHead>
                   </TableRow>
                 </TableHeader>
-                <TableRow>
-                  <TableCell>0890890808</TableCell>
-                  <TableCell>989 9389 0393</TableCell>
-                  <TableCell>k0NpI@example.com</TableCell>
-                  <TableCell>www.abc.com</TableCell>
-                  <TableCell>
-                    <div className="flex flex-col items-start space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
-                      <Button>
-                        <GrView />
-                      </Button>
-                      <Button>
-                        <IoIosRefresh />
-                      </Button>
-                    </div>
-                  </TableCell>
-                </TableRow>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>0890890808</TableCell>
+                    <TableCell>989 9389 0393</TableCell>
+                    <TableCell>k0NpI@example.com</TableCell>
+                    <TableCell>www.abc.com</TableCell>
+                    <TableCell>
+                      <div className="flex flex-col items-start space-y-4 md:flex-row md:items-end md:space-x-4 md:justify-center">
+                        <Button>
+                          <GrView />
+                        </Button>
+                        <Button>
+                          <IoIosRefresh />
+                        </Button>
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
               </Table>
             </AccordionContent>
           </AccordionItem>

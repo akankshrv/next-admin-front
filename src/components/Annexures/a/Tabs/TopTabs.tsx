@@ -10,7 +10,7 @@ import CustomOnlySection from "../CustomOnlySection";
 const TopTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index) => {
+  const handleTabClick = (index : any) => {
     setActiveTab(index);
   };
 

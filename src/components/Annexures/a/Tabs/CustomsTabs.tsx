@@ -6,9 +6,9 @@ import WarehouseDetails from "../WarehouseDetails";
 import Link from "next/link";
 import classnames from "classnames";
 import CustomOnlySection from "../CustomOnlySection";
-import CompanyApproval from "../CustomsComponents/CompanyApproval";
-import WareHouseApproval from "../CustomsComponents/WareHouseApproval";
-import IssueOfLicence from "../CustomsComponents/IssueOfLicence";
+import CompanyApproval from "../WarehouseComponents/CompanyApproval";
+import WareHouseApproval from "../WarehouseComponents/WareHouseApproval";
+import IssueOfLicence from "../WarehouseComponents/IssueOfLicence";
 
 const CustomsTabs = () => {
   const [activeTab, setActiveTab] = useState(0);

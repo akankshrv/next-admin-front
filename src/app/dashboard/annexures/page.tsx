@@ -13,9 +13,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Annexures } from "@/index";
 import Link from "next/link";
 
+
 const AnnexuresCompanies = async () => {
     async function getAnnexures(): Promise<Annexures> {
-        const annexureResult = await fetch("http://localhost:3000/api/annexures");
+        const annexureResult = await fetch(`${process.env.BASE_URL}/api/annexures`);
         return annexureResult.json();
       }
       const annexures = await getAnnexures();

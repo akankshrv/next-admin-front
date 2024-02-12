@@ -13,7 +13,7 @@ import React from "react";
 import { ApprovedWarehouse, PendingApprovedWarehouse } from "../../CustomsComponents";
 
 
-export default function WareHouseApprovalDialog({
+export default function CompanyApprovalDialog({
   isEdit,
 }: Props): JSX.Element {
   return (
