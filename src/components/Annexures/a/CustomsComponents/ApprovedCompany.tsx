@@ -3,7 +3,7 @@ import React from "react";
 function ApprovedCompany() {
   return (
     <>
-      <div className="flex flex-col pr-10 w-">
+      <div className="flex flex-col pr-10">
         <div className="flex flex-col border border-gray-300 w-[1000px]">
           <div className="flex flex-row border-b border-gray-300 ">
             <h2 className="flex-1 p-4">1. Verification of the applicant </h2>
