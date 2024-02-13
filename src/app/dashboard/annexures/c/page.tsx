@@ -1,9 +1,13 @@
-import React from 'react'
+import FormAnnexureC from "@/components/Annexures/c/FormAnnexureC";
+
 
 const AnnexureC = () => {
-  return (
-    <div>AnnexureC</div>
-  )
-}
 
-export default AnnexureC
+  return (
+    <div>
+      <FormAnnexureC/>
+    </div>
+  );
+};
+
+export default AnnexureC;

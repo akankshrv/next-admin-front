@@ -104,14 +104,12 @@ const CustomOnlySection = () => {
 
           <h1>Issue of Licence : </h1>
           <div className="flex flex-row gap-3">
-
-          <IssuePartOneDialog isEdit={true}/>
-         <CustomsSignatureDialog isEdit={true}/>
+            <IssuePartOneDialog isEdit={true} />
+            <CustomsSignatureDialog isEdit={true} />
           </div>
           <div className="flex flex-row gap-3 mt-2">
-
-          <IssuePartOneDialog isEdit={false}/>
-         <CustomsSignatureDialog isEdit={false}/>
+            <IssuePartOneDialog isEdit={false} />
+            <CustomsSignatureDialog isEdit={false} />
           </div>
         </Card>
       </div>
