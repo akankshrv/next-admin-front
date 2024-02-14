@@ -1,14 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "../../../ui/button";
-import CompanyDetails from "../CompanyDetails";
-import WarehouseDetails from "../WarehouseDetails";
+
 import Link from "next/link";
-import classnames from "classnames";
-import CustomOnlySection from "../CustomOnlySection";
-import CompanyApproval from "../WarehouseComponents/CompanyApproval";
-import WareHouseApproval from "../WarehouseComponents/WareHouseApproval";
-import IssueOfLicence from "../WarehouseComponents/IssueOfLicence";
+import PartA from "../PartAComponents/PartA";
+import PartB from "../PartBComponents/PartB";
 
 const CustomsTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -32,7 +28,7 @@ const CustomsTabs = () => {
                   : "text-md"
               }
             >
-              Company Approval
+              Part A
             </Button>
           </Link>
         </div>
@@ -48,23 +44,7 @@ const CustomsTabs = () => {
                   : "text-md"
               }
             >
-              Warehouse Approval
-            </Button>
-          </Link>
-        </div>
-        <div
-          className={activeTab === 2 ? "active" : ""}
-          onClick={() => handleTabClick(2)}
-        >
-          <Link href="#" passHref>
-            <Button
-              className={
-                activeTab === 2
-                  ? "active-link text-md bg-blue-500 transition-colors hover:bg-blue-800"
-                  : "text-md"
-              }
-            >
-              Issue of License
+              Part B
             </Button>
           </Link>
         </div>
@@ -73,19 +53,10 @@ const CustomsTabs = () => {
       <div>
         {activeTab === 0 && (
           <div>
-            <CompanyApproval />
+            <PartA />
           </div>
         )}
-        {activeTab === 1 && (
-          <div>
-            <WareHouseApproval />
-          </div>
-        )}
-        {activeTab === 2 && (
-          <div>
-            <IssueOfLicence />
-          </div>
-        )}
+        {activeTab === 1 && <div><PartB /></div>}
       </div>
     </div>
   );

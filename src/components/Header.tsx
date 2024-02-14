@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import aurigraphLogo from "@/assets/aurigraphLogo.jpg";
 
-export default function Header({ admin }: { admin: boolean }) {
+export default function Header() {
   return (
     <>
       <div className="flex justify-between px-4 items-center mx-10">

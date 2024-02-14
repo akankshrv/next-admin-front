@@ -1,8 +1,11 @@
+import FormAnnexureD from '@/components/Annexures/d/FormAnnexureD'
 import React from 'react'
 
 const AnnexureD = () => {
   return (
-    <div>AnnexureD</div>
+    <>
+     <FormAnnexureD /> 
+    </>
   )
 }
 
