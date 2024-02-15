@@ -16,6 +16,9 @@ export interface Companies {
 }
 
 export interface Props {
-  
-  isEdit : boolean;
+  isEdit: boolean;
+}
+
+export interface AnnexureD {
+  isDispatch: boolean;
 }

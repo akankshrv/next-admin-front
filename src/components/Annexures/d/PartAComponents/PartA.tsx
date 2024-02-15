@@ -12,6 +12,7 @@ import ImportDetailsDialog from "../Dialogs/ImportDetailsDialog";
 import WarehouseDetailsDialog from "../Dialogs/WarehouseDetailsDialog";
 import DispatchOfGoodsDialog from "../Dialogs/DispatchOfGoodsDialog";
 import RemovalPurposeDialog from "../Dialogs/RemovalPurposeDialog";
+import DetailsOfDispatchDialog from "../Dialogs/DetailsOfDispatchDialog";
 
 export default function PartA() {
   return (
@@ -19,7 +20,7 @@ export default function PartA() {
       <div className="w-full flex flex-col gap-4 p-10 ">
         <div className="w-full p-10 rounded-md bg-black/5">
           <h1>Part A</h1>
-          <p>This part A has to be filled at the dispatch ware house</p>
+          <p>This part A has to be filled at the dispatch ware house.</p>
 
           <Table>
             <TableHeader>
@@ -53,27 +54,21 @@ export default function PartA() {
                 </TableCell>
                 <TableCell>
                   <div className="flex gap-2">
-                   <RemovalPurposeDialog isEdit={true}/>
-                   <RemovalPurposeDialog isEdit={false}/>
+                    <RemovalPurposeDialog isEdit={true} />
+                    <RemovalPurposeDialog isEdit={false} />
                   </div>
                 </TableCell>
                 <TableCell>
                   <div className="flex gap-2">
-                    <Button>
-                      <CiViewTable />
-                    </Button>
-                    <Button>
-                      <FaEdit />
-                    </Button>
+                    <DetailsOfDispatchDialog isEdit={true} />
+                    <DetailsOfDispatchDialog isEdit={false} />
                   </div>
                 </TableCell>
               </TableRow>
             </TableBody>
           </Table>
         </div>
-        <div className="flex justify-end pr-10 pt-10">
-          <Button className="w-96">Submit</Button>
-        </div>
+        
       </div>
     </>
   );
