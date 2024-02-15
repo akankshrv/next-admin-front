@@ -13,9 +13,11 @@ import React from "react";
 
 import { CiViewTable } from "react-icons/ci";
 import { FaEdit } from "react-icons/fa";
-import EditDispatchOfGoods from "../PartAComponents/EditDispatchOfGoods";
-import ViewDispatchOfGoods from "../PartAComponents/ViewDispatchOfGoods";
-export default function DispatchOfGoodsDialog({ isEdit }: Props): JSX.Element {
+import EditDetailsOfDispatch from "../PartAComponents/EditDetailsOfDispatch";
+import ViewDetailsofDispatch from "../PartAComponents/ViewDetailsofDispatch";
+export default function DetailsOfDispatchDialog({
+  isEdit,
+}: Props): JSX.Element {
   return (
     <>
       <Dialog>
@@ -40,24 +42,22 @@ export default function DispatchOfGoodsDialog({ isEdit }: Props): JSX.Element {
           <div>
             <DialogHeader>
               <DialogTitle className="text-3xl">
-                Details of the Goods at Dispatch{" "}
+                Time and transportation vehicle details at Dispatch{" "}
               </DialogTitle>
               <DialogDescription>
                 {isEdit ? (
                   <div>
-                    Please provide the details and specifications of the goods
-                    that are being dispatched , description of the goods, the
-                    number of packages the total weight of the dispatched goods
-                    and quantity and the total value of the goods being
-                    dispatched.
+                    Please provide the details of the time of removal of the
+                    goods from one warehouse to another and the mode transport,
+                    the details of the vehicle used for the transport of the
+                    goods during dispatch should be provided.
                   </div>
                 ) : (
                   <div>
-                    the details and specifications of the goods
-                    that are being dispatched , description of the goods, the
-                    number of packages the total weight of the dispatched goods
-                    and quantity and the total value of the goods being
-                    dispatched have been provided.
+                    The details of the time of removal of the goods from one
+                    warehouse to another and the mode transport, the details of
+                    the vehicle used for the transport of the goods during
+                    dispatch should be provided.
                   </div>
                 )}
               </DialogDescription>
@@ -67,11 +67,11 @@ export default function DispatchOfGoodsDialog({ isEdit }: Props): JSX.Element {
             <div className="absolute top-28 left-10">
               {isEdit ? (
                 <>
-                  <EditDispatchOfGoods />
+                  <EditDetailsOfDispatch />
                 </>
               ) : (
                 <>
-                  <ViewDispatchOfGoods />
+                  <ViewDetailsofDispatch />
                 </>
               )}
             </div>
