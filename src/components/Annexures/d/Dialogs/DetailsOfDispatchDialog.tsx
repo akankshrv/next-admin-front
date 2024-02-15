@@ -12,7 +12,7 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 import React from "react";
 
 import { CiViewTable } from "react-icons/ci";
-import { FaEdit } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa"; 
 import EditDetailsOfDispatch from "../PartAComponents/EditDetailsOfDispatch";
 import ViewDetailsofDispatch from "../PartAComponents/ViewDetailsofDispatch";
 export default function DetailsOfDispatchDialog({

@@ -68,9 +68,7 @@ export default function PartA() {
             </TableBody>
           </Table>
         </div>
-        <div className="flex justify-end pr-10 pt-10">
-          <Button className="w-96">Submit</Button>
-        </div>
+        
       </div>
     </>
   );
