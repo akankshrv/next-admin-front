@@ -1,9 +1,13 @@
 import React from 'react'
+import FormAnnexureB from './_components/FormAnnexureB'
 
-const AnnexureB = () => {
+const page = () => {
   return (
-    <div>AnnexureB</div>
+    <>
+    
+      <FormAnnexureB />
+    </>
   )
 }
 
-export default AnnexureB
+export default page
