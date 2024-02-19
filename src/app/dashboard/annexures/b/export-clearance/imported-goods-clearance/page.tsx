@@ -2,7 +2,7 @@
 
 const ImportedGoodsClearanceForExport = () => {
   return (
-    <div>ImportedGoodsClearanceForExport</div>
+    <div className='text-center'>ImportedGoodsClearanceForExport</div>
   )
 }
 

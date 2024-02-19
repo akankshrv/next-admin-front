@@ -2,7 +2,7 @@ import React from 'react'
 
 const TreatmentOfWasteExport = () => {
   return (
-    <div>TreatmentOfWasteExport</div>
+    <div className='text-center'>TreatmentOfWasteExport</div>
   )
 }
 

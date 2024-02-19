@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TreatmentOfWasteHomeConsumption = () => {
+const TreatmentOfWasteForHomeConsumption = () => {
   return (
-    <div>TreatmentOfWasteHomeConsumption</div>
+    <div className='text-center'>TreatmentOfWasteForHomeConsumption</div>
   )
 }
 
-export default TreatmentOfWasteHomeConsumption
+export default TreatmentOfWasteForHomeConsumption

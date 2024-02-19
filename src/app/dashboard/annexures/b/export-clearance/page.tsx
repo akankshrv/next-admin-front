@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExportClearance = () => {
   return (
-    <div>ExportClearance</div>
+    <div className='text-center'>ExportClearance</div>
   )
 }
 
