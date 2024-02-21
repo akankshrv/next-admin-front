@@ -177,8 +177,8 @@ const ProcessingForm = () => {
             </Accordion>
           </form>
         </CardContent>
-        <CardFooter className="flex justify-end">
-          <Button>Save</Button>
+        <CardFooter className="flex justify-start">
+          <Button className="w-96 ">Save</Button>
         </CardFooter>
       </Card>
     </>
