@@ -21,7 +21,7 @@ import {
 const RecieptsForm = () => {
   return (
     <>
-      <Card className="max-w-4xl mx-auto my-10 bg-gray-100 p-20">
+      <Card className="max-w-4xl mx-auto my-5 bg-gray-100 p-5">
         <CardHeader>
           <CardTitle>
             <h1 className="text-3xl">Receipts(import)</h1>
