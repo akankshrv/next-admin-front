@@ -17,6 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Textarea } from "@/components/ui/textarea";
 
 const RecieptsForm = () => {
   return (
@@ -29,107 +30,116 @@ const RecieptsForm = () => {
         </CardHeader>
 
         <CardContent className="mx-auto">
-          <form >
-            <div >
+          <form>
+            <div>
               <Accordion
                 type="single"
                 collapsible
-                className="gap-10 "
+                defaultValue="item1"
+                className="gap-10"
               >
-                <AccordionItem value="item1" className="w-[700px]">
+                <AccordionItem value="item1" className="">
                   <AccordionTrigger className="font-semibold text-2xl">
                     Part I
                   </AccordionTrigger>
-                  <AccordionContent className="flex w-[700px] flex-col gap-5">
-                    <div className="flex gap-10">
-                      <div>
+                  <AccordionContent className="flex flex-col gap-5 p-5">
+                    <div className="flex gap-2">
+                      <div className="flex-1">
                         <Label>Bill of Entry No:</Label>
                         <Input placeholder="bill no" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <Label>Date</Label>
                         <Input type="date" />
                       </div>
                     </div>
-                    <div className="max-w-xl">
-                      <Label>Customs Station of import</Label>
-                      <Input placeholder="Customs Station of import" />
+                    <div className="flex gap-2">
+                      <div className="flex-1">
+                        <Label>Customs Station of import</Label>
+                        <Input placeholder="Customs Station of import" />
+                      </div>
+                      <div className="flex-1">
+                        <Label>Details of Bond:</Label>
+                        <Input placeholder="Details of Bond" />
+                      </div>
                     </div>
-                    <div className="max-w-xl">
-                      <Label>Details of Bond:</Label>
-                      <Input placeholder="Details of Bond" />
-                    </div>
-                    <div className="max-w-xl">
-                      <Label>Details of Insurance:</Label>
-                      <Input placeholder="Details of Insurance" />
-                    </div>
+                    <div className="flex gap-5">
+                      <div className="flex-1">
+                        <Label>Details of Insurance:</Label>
+                        <Input placeholder="Details of Insurance" />
+                      </div>
 
-                    <div className="max-w-xl">
+                      <div className="flex flex-1 gap-2">
+                        <div className="flex-1">
+                          <Label>Invoice No:</Label>
+                          <Input placeholder="Invoice No" />
+                        </div>
+                        <div className="flex-1">
+                          <Label>Date</Label>
+                          <Input type="date" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1">
                       <Label>Description of goods</Label>
-                      <Input placeholder="Description of goods" />
+                      <Textarea placeholder="Description of goods" />
                     </div>
 
-                    <div className="flex p-px">
-                      <div className="max-w-xl">
-                        <Label>Invoice No:</Label>
-                        <Input placeholder="Invoice No" />
+                    <div className="flex gap-2">
+                      <div className="flex-1">
+                        <Label>Quantity with UQ</Label>
+                        <Input placeholder="Quantity with UQ" />
                       </div>
-                      <div className="max-w-xl mx-10">
-                        <Label>Date</Label>
-                        <Input type="date" />
+                      <div className="flex-1">
+                        <Label>Assessable Value</Label>
+                        <Input placeholder="assessable value" />
                       </div>
-                    </div>
-
-                    <div className="max-w-xl p-px">
-                      <Label>Quantity with UQ</Label>
-                      <Input placeholder="Quantity with UQ" />
-                    </div>
-
-                    <div className="max-w-xl">
-                      <Label>Assessable Value</Label>
-                      <Input placeholder="assessable value" />
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item2" className="w-[700px]">
+
+                <AccordionItem value="item2">
                   <AccordionTrigger className="text-2xl font-semibold">
-                    Part II : Duty Assessed
+                    Part II
                   </AccordionTrigger>
-                  <AccordionContent className="flex w-[700px] flex-col gap-5">
-                    <div className="max-w-xl">
-                      <Label>BCD:</Label>
-                      <Input placeholder="BCD" />
+                  <AccordionContent className="flex flex-col gap-5 p-3">
+                    <p className="text-xl font-extralight">Duty Assessed</p>
+                    <div className="flex gap-2">
+                      <div className="flex-1">
+                        <Label>BCD:</Label>
+                        <Input placeholder="BCD" />
+                      </div>
+
+                      <div className="flex-1">
+                        <Label>IGST:</Label>
+                        <Input placeholder="IGST" />
+                      </div>
+                      <div className="flex-1">
+                        <Label>Comp cess:</Label>
+                        <Input placeholder="comp. cess" />
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="flex gap-2">
+                      <div className="flex-1">
+                        <Label>Registration No. of means of transport:</Label>
+                        <Input placeholder="registration no." />
+                      </div>
+                      <div className="flex-1">
+                        <Label>One-time-Lock no:</Label>
+                        <Input placeholder="lock no." />
+                      </div>
                     </div>
 
-                    <div className="max-w-xl">
-                      <Label>IGST:</Label>
-                      <Input placeholder="IGST" />
-                    </div>
-
-                    <div className="max-w-xl">
-                      <Label>Comp cess:</Label>
-                      <Input placeholder="comp. cess" />
-                    </div>
-
-                    <div className="max-w-xl">
-                      <Label>Registration No. of means of transport:</Label>
-                      <Input placeholder="registration no." />
-                    </div>
-
-                    <div className="max-w-xl">
-                      <Label>One-time-Lock no:</Label>
-                      <Input placeholder="lock no." />
-                    </div>
-
-                    <div className="flex ">
-                      <div className="max-w-xl">
+                    <div className="flex gap-2">
+                      <div className="flex-1">
                         <Label>Date</Label>
                         <Input type="date" />
                       </div>
 
-                      <div className="mx-10 max-w-xl ">
+                      <div className="flex-1 ">
                         <Label>Time of receipt at the warehouse</Label>
-                        <Input type="time" />
+                        <Input type="time"  />
                       </div>
                     </div>
                   </AccordionContent>
