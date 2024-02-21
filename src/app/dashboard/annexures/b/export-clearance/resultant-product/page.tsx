@@ -86,6 +86,37 @@ const ResultantProductExport = () => {
               <Label>Comp.cess</Label>
               <Input placeholder="Comp.cess" />
             </div>
+            <div>
+              <p>Quantinty of warehoused goods contained in so much of the resultant products exported:</p>
+              <div className="max-w-xl">
+              <Label>Description of goods</Label>
+              <Input placeholder="Description of goods" />
+            </div>
+
+            <div className="max-w-xl">
+              <Label>Quality with UQC:</Label>
+              <Input placeholder="Quality with UQC" />
+            </div>
+            <div className="max-w-xl">
+              <Label>Assessable Value:</Label>
+              <Input placeholder="Assessable Value" />
+            </div>
+            </div>
+            <div>
+              <p>Duty involved:</p>
+              <div className="max-w-xl">
+                <Label>BCD</Label>
+                <Input placeholder="BCD" />
+              </div>
+              <div className="max-w-xl">
+                <Label>IGST</Label>
+                <Input placeholder="IGST" />
+              </div>
+            </div>
+            <div>
+              <Label>Comp.cess</Label>
+              <Input placeholder="Comp.cess" />
+            </div>
           </form>
         </CardContent>
         <CardFooter className="flex justify-end">
