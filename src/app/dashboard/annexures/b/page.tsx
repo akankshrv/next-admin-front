@@ -4,7 +4,6 @@ import FormAnnexureB from './_components/FormAnnexureB'
 const page = () => {
   return (
     <>
-    
       <FormAnnexureB />
     </>
   )
