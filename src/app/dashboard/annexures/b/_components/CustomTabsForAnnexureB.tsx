@@ -96,7 +96,7 @@ const CustomTabsForAnnexureB = () => {
           className={activeTab === 5 ? "active" : ""}
           onClick={() => handleTabClick(5)}
         >
-          <Link href="/dashboard/annexures/b/export-clearance/imported-goods-clearance" passHref>
+          <Link href="/dashboard/annexures/b/export-clearance/resultant-product" passHref>
             <Button
               className={
                 activeTab === 5
@@ -112,7 +112,7 @@ const CustomTabsForAnnexureB = () => {
           className={activeTab === 6 ? "active" : ""}
           onClick={() => handleTabClick(6)}
         >
-          <Link href="/dashboard/annexures/b/home-consumption-clearance/imported-goods" passHref>
+          <Link href="/dashboard/annexures/b/home-consumption-clearance/resultant-product" passHref>
             <Button
               className={
                 activeTab === 6
